@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Very Important Question 💌</title>
+  <meta name="description" content="I have a question for you." />
+  <meta name="theme-color" content="#1a0a14" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg" id="bg" aria-hidden="true"></div>
+
+  <main class="stage">
+    <!-- Screen 1: the question -->
+    <section class="card screen is-active" id="screen-ask" aria-live="polite">
+      <div class="emoji" aria-hidden="true">💌</div>
+      <h1 id="title">Hey <span id="name">you</span>…</h1>
+      <p class="question">Will you go on a date with me?</p>
+      <div class="buttons">
+        <button class="btn btn-yes" id="yes" type="button">Yes 💖</button>
+        <button class="btn btn-no" id="no" type="button">No</button>
+      </div>
+    </section>
+
+    <!-- Screen 2: yes -->
+    <section class="card screen" id="screen-yes" aria-live="polite">
+      <div class="big-heart" aria-hidden="true">
+        <svg viewBox="0 0 32 29.6" role="img" aria-label="A big red heart">
+          <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+        </svg>
+      </div>
+      <h2>Yesss! 🥹</h2>
+      <p class="sub">You just made me the happiest person alive.<br />Get ready, I'm planning something special 💕</p>
+    </section>
+
+    <!-- Screen 3: no -->
+    <section class="card screen" id="screen-no" aria-live="assertive">
+      <div class="emoji" aria-hidden="true">🖕</div>
+      <h2 class="rude">Fuck you.</h2>
+      <p class="sub">Wrong answer, babe.</p>
+      <button class="btn btn-yes" id="retry" type="button">Okay okay, let me try again 🥺</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
